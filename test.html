@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+}
+.preview_game_lite_container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.preview_game_lite {
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 0px;
+    width: 250px;
+    background-color: rgb(177, 194, 207);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 10px;
+    color: rgb(60, 60, 60);
+}
+.preview_game_lite>h4{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.preview_game_lite>img{
+    margin-bottom: 5px;
+}
+.preview_game_lite>p{
+    font-size: 13px;
+}
+.preview_game_lite>img{
+    height: 150px;
+    width: 100%;
+}
+.preview_game_lite>div:nth-child(4){
+    margin-bottom: 5px;
+    background-color: rgba(80, 89, 103, 0.846);
+    padding: 5px;
+}
+.preview_game_lite>div:nth-child(4)>p{
+    color: rgb(200,200,200);
+    font-size: 14px;
+}
+.preview_game_lite>div:nth-child(4)>span{
+    color: #67c1f5;
+    font-size: 14px;
+}
+.preview_game_lite>div:nth-child(4)>span+span{
+    color: rgb(200,200,200);;
+}
+.preview_game_lite>p:nth-child(5){
+    font-size: 14px;
+}
+.preview_game_lite>div:nth-child(6){
+    display: flex;
+}
+.preview_game_lite>div:nth-child(6)>div{
+    color: rgb(200, 200, 200);
+    padding: 1px 3px;
+    background-color:gray;
+    font-size: 11px;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-right: 3px;
+}
+.preview_game_lite_container:hover .preview_game_lite {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="preview_game_lite_container">
+    <img src="Images/capsule_184x69.jpg" alt="">
+
+    <div class="preview_game_lite">
+        <h4>
+            Tom Clancy's Rainbow Six® Siege
+        </h4>
+        <p>Released: Dec 1, 2015</p>
+        <img src="Images/capsule_616x353.jpg" alt="">
+        <div>
+            <p>Overall user reviews</p>
+            <span>Very Positive</span> <span>(1,005.953) reviews</span>
+        </div>
+        <p>User tags:</p>
+        <div>
+            <div>FPS</div>
+            <div>PVP</div>
+            <div>eSports</div>
+            <div>Shooter</div>
+            <div>Multiplayer</div>
+            <div>Tactical</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
