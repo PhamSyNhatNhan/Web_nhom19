@@ -187,4 +187,21 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    const container = $('.preview_game_container');
 
+    container.on('mouseenter', function() {
+        const video = $(this).find('video')[0];
+        if (video) {
+            video.currentTime = 0; 
+            video.play(); 
+        }
+    });
+
+    container.on('mouseleave', function() {
+        const video = $(this).find('video')[0];
+        if (video) {
+            video.pause();
+        }
+    });
+});
