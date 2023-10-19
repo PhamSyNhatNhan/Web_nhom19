@@ -205,3 +205,46 @@ $(document).ready(function() {
         }
     });
 });
+
+$(".best_seller_body .topseller_charts > tbody > tr").each(function () {
+    var $changeColumn = $(this).find("td:nth-child(4)");
+    var content = $changeColumn.text();
+    if (content.includes("▲")) {
+        $changeColumn.css("color", "green");
+    } else {
+        $changeColumn.css("color", "rgb(237, 184, 121)");
+    }
+});
+
+function changeMedia(type, source) {
+    const largeMedia = document.getElementById('largeMedia');
+    const largeVideo = document.getElementById('largeVideo');
+
+    if (type === 'image') {
+        largeMedia.style.display = 'block';
+        largeVideo.style.display = 'none';
+        largeMedia.src = source;
+    } else if (type === 'webm') {
+        largeMedia.style.display = 'none';
+        largeVideo.style.display = 'block';
+        largeVideo.src = source;
+    }
+}
+
+$(document).ready(function () {
+    $(".system_option").click(function () {
+        $(".system_option").removeClass("active");
+        $(this).addClass("active");
+    });
+});
+
+$(document).ready(function () {
+    $(".show_more_languages").click(function () {
+        const viewMoreLanguageRows = $(".languages_support tbody tr:hidden");
+
+        if (viewMoreLanguageRows.length > 0) {
+            viewMoreLanguageRows.css('display', 'table-row');
+            $(this).css('display', 'none');
+        }
+    });
+});
