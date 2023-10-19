@@ -61,6 +61,22 @@ $(document).ready(function() {
             autoAdvanceTimer = setInterval(nextSlide, slideDuration);
         });
 
+        prev-button_ct.on('mouseover', function() {
+            clearInterval(autoAdvanceTimer);
+        });
+
+        prev-button_ct.on('mouseout', function() {
+            autoAdvanceTimer = setInterval(nextSlide, slideDuration);
+        });
+
+        nextButton.on('mouseover', function() {
+            clearInterval(autoAdvanceTimer);
+        });
+
+        nextButton.on('mouseout', function() {
+            autoAdvanceTimer = setInterval(nextSlide, slideDuration);
+        });
+
         autoAdvanceTimer = setInterval(nextSlide, slideDuration);
 
         function hideAllSlides() {
