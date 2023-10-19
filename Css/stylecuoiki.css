@@ -250,6 +250,7 @@ body{
     position: absolute;
     right: 0px;
     top: 5px;
+    z-index: 2;
 }
 .i_header_1 > a{
     color: white;
