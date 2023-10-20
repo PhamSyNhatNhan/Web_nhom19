@@ -61,11 +61,11 @@ $(document).ready(function() {
             autoAdvanceTimer = setInterval(nextSlide, slideDuration);
         });
 
-        prev-button_ct.on('mouseover', function() {
+        prevButton.on('mouseover', function() {
             clearInterval(autoAdvanceTimer);
         });
 
-        prev-button_ct.on('mouseout', function() {
+        prevButton.on('mouseout', function() {
             autoAdvanceTimer = setInterval(nextSlide, slideDuration);
         });
 
