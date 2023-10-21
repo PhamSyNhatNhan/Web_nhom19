@@ -74,6 +74,7 @@ $(document).ready(function() {
         var nextButton = container.find('.slider-container > .next-button');
         var dotsContainer = container.find('.i_main_con_sub');
         var dots = [];
+        var IsSwitch = true;
     
         let currentSlideIndex = 0;
         let autoAdvanceTimer;
@@ -102,18 +103,38 @@ $(document).ready(function() {
     
         slider.on('mouseover', function() {
             clearInterval(autoAdvanceTimer);
+            IsSwitch = false;
         });
     
         prevButton.on('mouseover', function() {
             clearInterval(autoAdvanceTimer);
+            IsSwitch = false;
         });
     
         nextButton.on('mouseover', function() {
             clearInterval(autoAdvanceTimer);
+            IsSwitch = false;
         });
     
         slider.on('mouseout', function() {
-            autoAdvanceTimer = setInterval(nextSlide, 2000);
+            if(!IsSwitch){
+                autoAdvanceTimer = setInterval(nextSlide, 2000);
+                IsSwitch = true;
+            }
+        });
+
+        prevButton.on('mouseout', function() {
+            if(!IsSwitch){
+                autoAdvanceTimer = setInterval(nextSlide, 2000);
+                IsSwitch = true;
+            }
+        });
+
+        nextButton.on('mouseout', function() {
+            if(!IsSwitch){
+                autoAdvanceTimer = setInterval(nextSlide, 2000);
+                IsSwitch = true;
+            }
         });
     
         autoAdvanceTimer = setInterval(nextSlide, 2000);
